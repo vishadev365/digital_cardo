@@ -168,15 +168,24 @@ span.round-tab i{
 }
 .prev-step,
 .next-step{
-    font-size: 25px;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+
+    
     padding: 8px 24px;
     border: none;
     border-radius: 4px;
     margin-top: 30px;
     cursor: pointer;
 }
-.next-step{
+/*.next-step{
      background-color: #0db02b;
+}*/
+
+.next-step{
+     background: #636EE1;
+     color: #fff;
 }
 .skip-btn{
      background-color: #cec12d;
@@ -353,16 +362,14 @@ input[type="checkbox"]:checked::before{
 }
 
 
-.next-step{
-     background: #636EE1;
-     color: #fff;
-}
+
 
 input, textarea{
      border: 1px solid gray !important;
 }
 
 .add_more{
+    font-size: 25px;
      background: #636EE1; 
      color: #fff;
       border: none; 
@@ -371,34 +378,29 @@ input, textarea{
        cursor: pointer;
 }
 
-/*.form-control, input[type="file"] {
-font-size:25px;
-text-align:center;
-
-border: 0;
-outline: 0;
-border-bottom: 2px solid #03a8f45e;
- }*/
 
 
-/*
 .form-control {
-font-size:15px;
+font-size:35px;
 text-align:center;
 font-weight:600;
-border: 0;
-outline: 0;
-border-bottom: 2px solid #03a8f45e;
-}*/
+border: 0 !important;
+outline: 0 !important;
+border-bottom: 2px solid #03a8f45e !important;
+}
 
-/*.form-control[type="file"]{
-    height: 43px;
-}*/
+.form-control:focus{
+    border: 2px solid #03a8f45e !important;
+}
 
-/*.form-control[type="radio"]{
-   font-size: ;
-}*/
 
+.heading_dtl{
+    font-size: 40px;
+}
+
+.number_count{
+    font-size: 35px !important;
+}
 
 </style>
 
@@ -437,7 +439,7 @@ border-bottom: 2px solid #03a8f45e;
 
                                 <div class="tab-pane active" role="tabpanel" id="step1">
 
-                                    <h2 class="text-center pb-4">Personal Details</h2>
+                                    <div class="text-center heading_dtl pb-4">Personal Details</div>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -475,7 +477,7 @@ border-bottom: 2px solid #03a8f45e;
 <!-- ============================Business Details============================ -->
 
                                 <div class="tab-pane" role="tabpanel" id="step2">
-                                    <h1 class="text-center pb-4">Business Details</h1>
+                                    <div class="text-center heading_dtl pb-4">Business Details</div>
                                     <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -508,14 +510,15 @@ border-bottom: 2px solid #03a8f45e;
                                     <ul class="list-inline pull-right">
                                         <li><button type="button" class="default-btn prev-step">Back</button></li>
                                         <!-- <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li> -->
-                                        <li><button type="button" class="default-btn next-step ">Continue</button></li>
+                                        <li><button type="button" class="default-btn next-step">Continue</button></li>
                                     </ul>
                                 </div>
 
 <!-- ============================Product / Service Details============================ -->
 
                                 <div class="tab-pane" role="tabpanel" id="step3">
-                                    <h1 class="text-center pb-4">Product / Service Details</h1>
+                                    <div class="text-center heading_dtl pb-4">Product / Service Details</div>
+
                                      <div class="row">
                                     <div class="col-md-6">
                                         <div class="row d-flex justify-content-around mb-5">
@@ -555,6 +558,8 @@ border-bottom: 2px solid #03a8f45e;
  <!-- <label>Image</label>  -->
 
 <input type="file" class="form-control" name="image[]" placeholder="Image" required>
+<!-- <input type="file" id="selectedFile" name="image[]" style="display: none;" />
+<input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" /> -->
 </div><!-- //col-md-6 -->
 
 </div><!-- //row -->
@@ -573,7 +578,8 @@ border-bottom: 2px solid #03a8f45e;
 <!-- ============================Gallary============================ -->
 
                                 <div class="tab-pane" role="tabpanel" id="step4">
-                                    <h1 class="text-center pb-4">Chose upto 6 Image</h1>
+                                    <div class="text-center heading_dtl pb-4">Chose upto 6 Image</div>
+
                                     <div class="all-info-container">
 
 
@@ -714,7 +720,7 @@ $('.nav-tabs').on('click', 'li', function() {
 var i=1;
 $(document).on('click','.add_more',function(){
 i++;
-$('.multiple_add_more').append('<h1 class="text-center mt-2" style="transform: translateY(40%);">'+i+'.</h1>  '+
+$('.multiple_add_more').append('<h1 class="text-center number_count mt-2" style="transform: translateY(40%);">'+i+'.</h1>  '+
 
     '<div class="col-md-12">'+
      

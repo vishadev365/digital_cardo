@@ -10,7 +10,8 @@
 <form>
 <input type="email" class="form-control email" />
 <br />
-<button type="button" value="Submit" class="btn btn-form btn-primary btn-block btn-lg continue">Continue</button>
+<p class="text-center text-danger error_msg"></p>
+<button type="button" class="btn btn-form btn-block btn-lg continue">Continue</button>
 </form>
 
 </div>
@@ -31,6 +32,9 @@
        
        var email=$('.email').val();
 		// alert(email);
+       if(email==""){
+     $('.error_msg').html('Your filed is empty..')
+       }else{
        $.ajax({
        	url:'test.php',
        	type:'POST',
@@ -42,6 +46,7 @@
             window.location.href='otp_verify.php';
             }
        });
+  }
 	});
 </script>
 

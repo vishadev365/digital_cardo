@@ -169,6 +169,9 @@ section {
 }
 .btn-form {
 font-size:25px;
+background-color: #636EE1 !important;
+color:#fff !important;
+border:none;
 }
 
 .btn:hover {
@@ -357,7 +360,7 @@ font-size:25px;
 	border-bottom: 1px solid #edf1f2;
 }
 
-/* ==============================================
+/* ===============================================
    7. Pricing
 ===============================================*/
 
@@ -703,7 +706,7 @@ font-size: 36px;
 }*/
 
 .radio_name{
-	font-size: 36px;
+	font-size: 35px;
 /*	font-weight: bolder;*/
 	 padding-left: 10px;
 }
@@ -714,3 +717,4 @@ input[type="radio"]{
     height: 25px
 
 }
+
